@@ -2348,7 +2348,7 @@ h6,
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  margin-left: 250px;
+  margin: auto;
   min-height: 100vh;
   padding-bottom: 85px;
   position: relative; }

@@ -639,254 +639,44 @@
                   <table class="table top-selling-table">
                     <thead>
                       <tr>
-                        <th></th>
                         <th>
-                          <h6 class="text-sm text-medium">Products</h6>
+                          <h6 class="text-sm text-medium">firstname</h6>
                         </th>
                         <th class="min-width">
-                          <h6 class="text-sm text-medium">Category</h6>
+                          <h6 class="text-sm text-medium">lastname</h6>
                         </th>
                         <th class="min-width">
-                          <h6 class="text-sm text-medium">Price</h6>
+                          <h6 class="text-sm text-medium">email</h6>
                         </th>
                         <th class="min-width">
-                          <h6 class="text-sm text-medium">Sold</h6>
+                          <h6 class="text-sm text-medium">address</h6>
                         </th>
                         <th class="min-width">
-                          <h6 class="text-sm text-medium">Profit</h6>
+                          <h6 class="text-sm text-medium">mobile number</h6>
                         </th>
                         <th></th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <div class="check-input-primary">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="checkbox-1"
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <div class="product">
-                            <div class="image">
-                              <img
-                                src="assets/images/products/product-mini-1.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <p class="text-sm">Arm Chair</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="text-sm">Interior</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$345</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">43</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$45</p>
-                        </td>
-                        <td>
-                          <div class="action justify-content-end">
-                            <button
-                              class="more-btn ml-10 dropdown-toggle"
-                              id="moreAction1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="lni lni-more-alt"></i>
-                            </button>
-                            <ul
-                              class="dropdown-menu dropdown-menu-end"
-                              aria-labelledby="moreAction1"
-                            >
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Remove</a>
-                              </li>
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Edit</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="check-input-primary">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="checkbox-1"
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <div class="product">
-                            <div class="image">
-                              <img
-                                src="assets/images/products/product-mini-2.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <p class="text-sm">SOfa</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="text-sm">Interior</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$145</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">13</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$15</p>
-                        </td>
-                        <td>
-                          <div class="action justify-content-end">
-                            <button
-                              class="more-btn ml-10 dropdown-toggle"
-                              id="moreAction1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="lni lni-more-alt"></i>
-                            </button>
-                            <ul
-                              class="dropdown-menu dropdown-menu-end"
-                              aria-labelledby="moreAction1"
-                            >
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Remove</a>
-                              </li>
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Edit</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="check-input-primary">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="checkbox-1"
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <div class="product">
-                            <div class="image">
-                              <img
-                                src="assets/images/products/product-mini-3.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <p class="text-sm">Dining Table</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="text-sm">Interior</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$95</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">32</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$215</p>
-                        </td>
-                        <td>
-                          <div class="action justify-content-end">
-                            <button
-                              class="more-btn ml-10 dropdown-toggle"
-                              id="moreAction1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="lni lni-more-alt"></i>
-                            </button>
-                            <ul
-                              class="dropdown-menu dropdown-menu-end"
-                              aria-labelledby="moreAction1"
-                            >
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Remove</a>
-                              </li>
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Edit</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="check-input-primary">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="checkbox-1"
-                            />
-                          </div>
-                        </td>
-                        <td>
-                          <div class="product">
-                            <div class="image">
-                              <img
-                                src="assets/images/products/product-mini-4.jpg"
-                                alt=""
-                              />
-                            </div>
-                            <p class="text-sm">Office Chair</p>
-                          </div>
-                        </td>
-                        <td>
-                          <p class="text-sm">Interior</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$105</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">23</p>
-                        </td>
-                        <td>
-                          <p class="text-sm">$345</p>
-                        </td>
-                        <td>
-                          <div class="action justify-content-end">
-                            <button
-                              class="more-btn ml-10 dropdown-toggle"
-                              id="moreAction1"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false"
-                            >
-                              <i class="lni lni-more-alt"></i>
-                            </button>
-                            <ul
-                              class="dropdown-menu dropdown-menu-end"
-                              aria-labelledby="moreAction1"
-                            >
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Remove</a>
-                              </li>
-                              <li class="dropdown-item">
-                                <a href="#0" class="text-gray">Edit</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </td>
-                      </tr>
+                     @foreach ($data as $user)
+                        <tr>
+                          <td class="text-sm text-medium">
+                          {{$user->first_name}}
+                          </td>
+                          <td>
+                          {{$user->last_name}}
+                          </td>
+                          <td>
+                          {{$user->email}}
+                          </td>
+                          <td>
+                          {{$user->address}}
+                          </td>
+                          <td>
+                          {{$user->mobile_number}}
+                          </td>
+                        </tr>
+                     @endforeach
                     </tbody>
                   </table>
                   <!-- End Table -->
