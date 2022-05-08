@@ -84,4 +84,11 @@ class AdminController extends Controller
     {
         return Admin::where('first_name', 'like', '%'.$name.'%')->get();
     }
+
+    public function showDashboard()
+    {
+        $data = Admin::all();
+
+        return view('dashboard', compact('data'));
+    }
 }

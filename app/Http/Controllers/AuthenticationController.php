@@ -10,15 +10,15 @@ class AuthenticationController extends Controller
 {
 
     public function register(Request $request){
+
         $fields = $request->validate([
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'address' => 'required|string',
             'email' => 'required|string|unique:admins,email',
             'mobile_number' => 'required|string',
-            'role' => 'required|string',
-            'password' => 'required|string|confirmed'
-
+            'role' => 'string',
+            'password' => 'required|string'
         ]);
 
         $admin = Admin::create([
@@ -27,9 +27,8 @@ class AuthenticationController extends Controller
             'address'=>$fields['address'],
             'email'=>$fields['email'],
             'mobile_number'=>$fields['mobile_number'],
-            'role'=>$fields['role'],
+            'role'=>  'User',
             'password'=>bcrypt($fields['password'])
-
         ]);
 
         $token = $admin->createToken('myapptoken')->plainTextToken;

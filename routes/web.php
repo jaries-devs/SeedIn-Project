@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +16,8 @@ use App\Http\Controllers\AuthenticationController;
 |
 */
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+Route::get('dashboard',[AdminController::class, 'showDashboard']);
 
 Route::get('login',[AuthenticationController::class, 'showLogin']);
-
 
 Route::get('register',[AuthenticationController::class, 'showRegister']);

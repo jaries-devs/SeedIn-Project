@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link
       rel="shortcut icon"
       href="assets/images/favicon.svg"
@@ -81,100 +82,56 @@
                     Start creating the best possible user experience for you.
                  
                   </p>
-                  <form action="#">
+                  <form id="form-signup" >
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="input-style-1">
                           <label>First Name</label>
-                          <input type="text" placeholder="First Name" />
+                          <input id="first_name" name="first_name" type="text" placeholder="First Name" />
                         </div>
                       </div>
                        <!-- end col -->
                       <div class="col-md-6 mb-4">
                         <div class="input-style-1">
                           <label>Last Name</label>
-                          <input type="text" placeholder="Last Name" />
+                          <input id="last_name" name="last_name"  type="text" placeholder="Last Name" />
                         </div>
                       </div>
                       <!-- end col -->
                       <div class="col-12">
                         <div class="input-style-1">
                           <label>Address</label>
-                          <input type="address" placeholder="Address" />
+                          <input id="address" name="address" name="address" placeholder="Address" />
                         </div>
                       </div>
                       <!-- end col -->
-                      <div class="col-xxl-4">
-                        <div class="select-style-1">
-                          <label>Country</label>
-                          <div class="select-position">
-                            <select class="light-bg">
-                              <option value="">Select country</option>
-                              <option value="">USA</option>
-                              <option value="">UK</option>
-                              <option value="">Canada</option>
-                              <option value="">India</option>
-                              <option value="">Bangladesh</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xxl-4">
-                        <div class="select-style-1">
-                          <label>Province</label>
-                          <div class="select-position">
-                            <select class="light-bg">
-                              <option value="">Select province</option>
-                              <option value="">USA</option>
-                              <option value="">UK</option>
-                              <option value="">Canada</option>
-                              <option value="">India</option>
-                              <option value="">Bangladesh</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xxl-4">
-                        <div class="select-style-1">
-                          <label>Country</label>
-                          <div class="select-position">
-                            <select class="light-bg">
-                              <option value="">Select country</option>
-                              <option value="">USA</option>
-                              <option value="">UK</option>
-                              <option value="">Canada</option>
-                              <option value="">India</option>
-                              <option value="">Bangladesh</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
+                      
                        <!-- end col -->
                        <div class="col-12">
                         <div class="input-style-1">
                           <label>Email</label>
-                          <input type="email" placeholder="Email" />
+                          <input  id="email" name="email" name="email" placeholder="Email" />
                         </div>
                       </div>
                        <!-- end col -->
                        <div class="col-12">
                         <div class="input-style-1">
                           <label>Phone Number</label>
-                          <input type="number" placeholder="Phone Number" />
+                          <input id="mobile_number" name="mobile_number" type="number" placeholder="Phone Number" />
                         </div>
                       </div>
                        <!-- end col -->
                       <div class="col-12">
                         <div class="input-style-1">
                           <label>Password</label>
-                          <input type="password" placeholder="Password" />
+                          <input id="password" name="password" type="password" placeholder="Password" />
                         </div>
                       </div>
                       <!-- end col -->
                       <div class="col-12">
                         <div class="input-style-1">
                           <label>Confirm Password</label>
-                          <input type="password" placeholder="Confirm Password" />
+                          <input id="confirm-password" type="password" placeholder="Confirm Password" />
                         </div>
                       </div>
                       <!-- end col -->
@@ -205,7 +162,7 @@
                             flex-wrap
                           "
                         >
-                          <button
+                          <button id="sign-up" type="button"
                             class="
                               main-btn
                               primary-btn
