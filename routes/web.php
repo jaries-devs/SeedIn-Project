@@ -19,4 +19,6 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('login',[AuthenticationController::class, 'showLogin']);
+
+
 Route::get('register',[AuthenticationController::class, 'showRegister']);
