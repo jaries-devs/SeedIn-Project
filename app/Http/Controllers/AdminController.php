@@ -87,7 +87,19 @@ class AdminController extends Controller
 
     public function showDashboard()
     {
-        $data = Admin::all();
+
+        $user = Admin::where('id',$_SESSION["user"])->get();
+
+        $data = [
+            'user' => $user[0],
+            'admin' => Admin::all()
+        ];
+
+
         return view('dashboard', compact('data'));
+    }
+
+    public function getUserDetails() {
+        return $this->request;
     }
 }

@@ -6,6 +6,9 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
 class AuthenticationController extends Controller
 {
 
@@ -42,7 +45,6 @@ class AuthenticationController extends Controller
     }
 
    public function login(Request $request){
-
     $fields = $request->validate([
         'email' => 'required|string',
         'password' => 'required|string'
@@ -55,7 +57,11 @@ class AuthenticationController extends Controller
         ], 401);
     }
 
+
     $token = $admin->createToken('myapptoken')->plainTextToken;
+
+    $_SESSION["jwt"] = $token;
+    $_SESSION["user"] = $admin->id;
 
     $response = [
         'admin'=> $admin,
@@ -66,8 +72,9 @@ class AuthenticationController extends Controller
 }
 
 public function logout(Request $request){
-   auth()->user()->tokens()->delete();
-   return [
+    session_destroy();
+    auth()->user()->tokens()->delete();
+    return [
         'message' => 'logout'
     ];
 }
@@ -81,4 +88,23 @@ public function logout(Request $request){
     {
         return view('register');
     }
+
+    public function showroles() {
+        $user = Admin::where('id',$_SESSION["user"])->get();
+        $roles = Role::all();
+        $permission = Permission::all();
+
+
+
+        $data = [
+            'user' => $user[0],
+            'admin' => Admin::all(),
+            'roles' => $roles,
+            'permission' => $permission
+        ];
+
+
+        return view('roles', compact('data'));
+    }
 }
+
