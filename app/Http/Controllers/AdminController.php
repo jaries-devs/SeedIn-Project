@@ -88,7 +88,6 @@ class AdminController extends Controller
     public function showDashboard()
     {
         $data = Admin::all();
-
         return view('dashboard', compact('data'));
     }
 }

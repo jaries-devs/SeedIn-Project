@@ -20,6 +20,7 @@ use App\Http\Controllers\AuthenticationController;
 
 //Public Routes
 Route::post('/register', [AuthenticationController::class, 'register']);
+Route::post('/login', [AuthenticationController::class, 'login']);
 Route::get('/admins', [AdminController::class, 'index']);
 Route::get('/admins/{id}', [AdminController::class, 'show']);
 Route::get('/admins/search/{name}', [AdminController::class, 'search']);

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link
       rel="shortcut icon"
       href="assets/images/favicon.svg"
@@ -75,19 +76,19 @@
                     Start creating the best possible user experience for you
                     customers.
                   </p>
-                  <form action="#">
+                  <form id="form-signin" >
                     <div class="row">
                       <div class="col-12">
                         <div class="input-style-1">
                           <label>Email</label>
-                          <input type="email" placeholder="Email" />
+                          <input id="email" name="email" type="email" placeholder="Email" />
                         </div>
                       </div>
                       <!-- end col -->
                       <div class="col-12">
                         <div class="input-style-1">
                           <label>Password</label>
-                          <input type="password" placeholder="Password" />
+                          <input id="password" name="password"type="password" placeholder="Password" />
                         </div>
                       </div>
                       <!-- end col -->
@@ -122,7 +123,7 @@
                       </div>
                       <!-- end col -->
                       <div class="col-12">
-                        <div
+                        <div 
                           class="
                             button-group
                             d-flex
@@ -130,7 +131,7 @@
                             flex-wrap
                           "
                         >
-                          <button
+                          <button id="sign-in" type="button"
                             class="
                               main-btn
                               primary-btn
