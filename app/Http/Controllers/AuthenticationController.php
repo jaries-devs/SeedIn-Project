@@ -45,6 +45,7 @@ class AuthenticationController extends Controller
     }
 
    public function login(Request $request){
+
     $fields = $request->validate([
         'email' => 'required|string',
         'password' => 'required|string'
@@ -69,15 +70,26 @@ class AuthenticationController extends Controller
     ];
 
     return response($response, 201);
+    return redirect('dashboard');
 }
 
 public function logout(Request $request){
     session_destroy();
-    auth()->user()->tokens()->delete();
-    return [
+   auth()->user()->tokens()->delete();
+   return [
         'message' => 'logout'
     ];
 }
+    // public function logout(Request $request)
+    // {
+    //     Admin::logout();
+
+    //     $request->session()->invalidate();
+
+    //     $request->session()->regenerateToken();
+
+    //     return redirect('login');
+    // }
 
     function showLogin()
     {
