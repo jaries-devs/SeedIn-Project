@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link
       rel="shortcut icon"
       href="assets/images/favicon.svg"
@@ -350,7 +351,7 @@
                         </div>
                         <div class="content">
                           <h6>
-                            John Doe
+                            <?= $data['user']->first_name . $data['user']->last_name ?>
                             <span class="text-regular">
                               comment on a product.
                             </span>
@@ -420,7 +421,7 @@
                           <img src="assets/images/lead/lead-3.png" alt="" />
                         </div>
                         <div class="content">
-                          <h6>John Doe</h6>
+                          <h6><?= $data['user']->first_name . $data['user']->last_name ?></h6>
                           <p>Would you mind please checking out</p>
                           <span>12 mins ago</span>
                         </div>
@@ -459,7 +460,7 @@
                   >
                     <div class="profile-info">
                       <div class="info">
-                        <h6>John Doe</h6>
+                        <h6><?= $data['user']->first_name . $data['user']->last_name ?></h6>
                         <div class="image">
                           <img
                             src="assets/images/profile/profile-image.png"
@@ -492,7 +493,8 @@
                       <a href="#0"> <i class="lni lni-cog"></i> Settings </a>
                     </li>
                     <li>
-                      <a href="#0"> <i class="lni lni-exit"></i> Sign Out </a>
+                      <a id="sign-out"> <i class="lni lni-exit"></i> Sign Out </a>
+                      <input type="hidden" id="sign-out-token" value="<?= $_SESSION['jwt']; ?>">
                     </li>
                   </ul>
                 </div>
@@ -658,7 +660,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                     @foreach ($data as $user)
+                     @foreach ($data['admin'] as $user)
                         <tr>
                           <td class="text-sm text-medium">
                           {{$user->first_name}}

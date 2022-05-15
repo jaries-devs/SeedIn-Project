@@ -21,3 +21,6 @@ Route::get('dashboard',[AdminController::class, 'showDashboard']);
 Route::get('login',[AuthenticationController::class, 'showLogin']);
 
 Route::get('register',[AuthenticationController::class, 'showRegister']);
+
+Route::get('roles',[AuthenticationController::class, 'showroles']);
+
