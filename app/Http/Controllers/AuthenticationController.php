@@ -101,7 +101,7 @@ public function logout(Request $request){
         return view('register');
     }
 
-    public function showroles() {
+    public function showroles(Request $request) {
         $user = Admin::where('id',$_SESSION["user"])->get();
         $roles = Role::all();
         $permission = Permission::all();
@@ -113,8 +113,12 @@ public function logout(Request $request){
             'permission' => $permission
         ];
 
+        $roles = Role::orderBy('id','DESC')->paginate(5);
+        return view('roles.index',compact('roles'))
+            ->with('i', ($request->input('page', 1) - 1) * 5);
 
-        return view('roles', compact('data'));
+        // return view('roles.index', compact('roles'));
     }
+    
 }
 

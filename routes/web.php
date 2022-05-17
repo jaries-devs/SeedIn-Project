@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RoleController;
 
 
 /*
@@ -22,5 +23,10 @@ Route::get('login',[AuthenticationController::class, 'showLogin']);
 
 Route::get('register',[AuthenticationController::class, 'showRegister']);
 
-Route::get('roles',[AuthenticationController::class, 'showroles']);
+Auth::routes();
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('roles', RoleController::class);
+});
+// Route::get('roles',[AuthenticationController::class, 'showroles']);
 
