@@ -106,8 +106,6 @@ public function logout(Request $request){
         $roles = Role::all();
         $permission = Permission::all();
 
-
-
         $data = [
             'user' => $user[0],
             'admin' => Admin::all(),
