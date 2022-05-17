@@ -25,8 +25,8 @@ Route::get('register',[AuthenticationController::class, 'showRegister']);
 
 Auth::routes();
 
-Route::group(['middleware' => ['auth']], function() {
+// Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
-});
+// });
 // Route::get('roles',[AuthenticationController::class, 'showroles']);
 

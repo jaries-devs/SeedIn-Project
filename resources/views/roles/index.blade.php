@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+<div>
 
 @section('content')
 <div class="row">
@@ -10,7 +9,7 @@
         <div class="pull-right">
         @can('role-create')
             <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
-            @endcan
+        @endcan
         </div>
     </div>
 </div>
@@ -54,3 +53,5 @@
 
 <p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>
 @endsection
+
+</div>
